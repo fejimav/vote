@@ -1,6 +1,6 @@
 def registry= "817041139384.dkr.ecr.us-east-1.amazonaws.com"
 def tag = ""
-def ms = ""
+def ms = "vote-image"
 def region = "us-east-1"
 
 pipeline{
