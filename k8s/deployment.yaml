@@ -21,7 +21,7 @@ spec:
         app: vote
     spec:
       containers:
-      - image: 654654385216.dkr.ecr.us-east-1.amazonaws.com/vote-image
+      - image: 817041139384.dkr.ecr.us-east-1.amazonaws.com/vote-image
         name: vote
         env:
             - name: REDIS_HOST
