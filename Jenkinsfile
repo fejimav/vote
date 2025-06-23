@@ -52,6 +52,7 @@ pipeline{
                     // Create the EKS cluster if it doesn't exist
                             sh """
                             eksctl create cluster --name vote-dev --region ${region} --nodegroup-name my-nodes --node-type t3.small --managed --nodes 2
+                            kubectl create namespace vote
                             """
                             echo "EKS Cluster 'vote-dev' created successfully."
                         } else {
