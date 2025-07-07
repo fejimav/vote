@@ -67,7 +67,7 @@ pipeline{
             when{branch 'develop'}
             steps{
                 script{
-                    withAWS(region:"$region",credentials:'aws_creds'){
+                    withAWS(region:"$region",credentials:'aws-ecr-creds'){
                         sh "aws eks update-kubeconfig --name vote-dev"
                         sh 'curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.28.5/2024-01-04/bin/linux/amd64/kubectl'  
                         sh 'chmod u+x ./kubectl'
